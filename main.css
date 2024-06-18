@@ -1,0 +1,17 @@
+#box{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border: solid 4px black;
+    border-radius: 100px;
+    align-items: center;
+}
+#header{
+    font-family: 'Courier New', Courier, monospace;
+}
+#tareas{
+    flex-wrap: nowrap;
+}
+button{
+    margin: 10px;
+}

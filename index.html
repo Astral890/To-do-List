@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-do List</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <center><div id="box">
+            <div id="header">
+                <h1>To-do List</h1>
+            </div>
+            <hr style="width: 600px;"> 
+            <input type="text" name="tana" id="tana">
+            <button id="anadir">Anadir</button>
+            <div id="tareas">
+                <h2>Tareas en marcha</h2>
+                <ul id="lista">
+                </ul>
+            </div>
+            <hr style="width: 600px;">
+            <div id="tareas">
+                <h2>Tareas Completadas</h2>
+                <ul>
+
+                </ul>
+            </div>
+            <hr style="width: 580px;">
+            <button id="eliminar">Eliminar Tarea</button>
+        </div></center>
+        <script>
+            const a=document.getElementById('anadir');
+            a.addEventListener("click",incluirtarea);
+            const b=document.getElementById('eliminar');
+            function incluirtarea(){
+                let text=document.getElementById('tana').value;
+                document.getElementById('lista').innerHTML+=
+                '<input type="checkbox" name="t" id="t"</input><label>'+text+'</label><br>'
+            }
+        </script>
+    </body>
+</html>

@@ -20,7 +20,7 @@
             <hr style="width: 600px;">
             <div id="tareas">
                 <h2>Tareas Completadas</h2>
-                <ul>
+                <ul id="completadas">
 
                 </ul>
             </div>
@@ -28,13 +28,24 @@
             <button id="eliminar">Eliminar Tarea</button>
         </div>
         <script>
+            const arr=[];
+            const arrcomp=[];
             const a=document.getElementById('anadir');
             a.addEventListener("click",incluirtarea);
             const b=document.getElementById('eliminar');
+            let contador=0
             function incluirtarea(){
                 let text=document.getElementById('tana').value;
-                document.getElementById('lista').innerHTML+=
-                '<input type="checkbox" name="t" id="t"</input><label>'+text+'</label><br>'
+                arr.push('<div id="'+contador+'"><input type="checkbox" onclick="completar()" name="t" id="check"></input><label id="label"">'+text+'</label></div><br>');
+                document.getElementById('lista').innerHTML+=arr[contador++]
+            }
+            function completar(){
+                if(box.value=true){
+                    box.checked
+                    arrcomp.push('<input type="checkbox" name="t" id="complete"></input>'+(document.getElementById('label').innerHTML))
+                    document.getElementById('completadas').innerHTML+= arr[]
+                    document.getElementById('lista').innerHTML-='';
+                }
             }
         </script>
     </body>

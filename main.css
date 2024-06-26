@@ -13,6 +13,9 @@
 #tareas{
     flex-wrap: nowrap;
 }
+#listas{
+    display: flex;
+}
 button{
     margin: 10px;
 }

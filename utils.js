@@ -1,26 +1,38 @@
+const li=document.getElementById('completadas');
+li.addEventListener('click',eliminar());
 function incluirtarea(){
-    const entrada=document.getElementById('tana');
-    const toDo= document.getElementById('pendientes')
-    const text=entrada.value;
+    const toDo= document.getElementById('pendientes');
+    let text=document.getElementById('tana').value;
     if(text!=""){
         // Tarea individual
         const li=document.createElement('li');
-        li.className="listas";
+        li.id="listas";
+        //Un div
+        const divint=document.createElement('div')
+        divint.id="divlis"
         // Creacion parrafo
-        const p=document.createElement('p');
-        p.innerHTML=
+        const snap=document.createElement('snap');
+        snap.innerHTML=text;
         // Creacion boton
         const check=document.createElement('button')
+        check.id='complete';
+        check.innerHTML='Completada';
         check.onclick=completar;
+        // check.onclick=completar();
+        //Agrupamiento
+        divint.appendChild(snap);
+        divint.appendChild(check);
+        li.appendChild(divint)
+        console.log(li);
+        toDo.appendChild(li);
     }
-    
 }
 function completar(event){
-    const li=event.target.parentElement.parentElement.parentElement;
+    const lic=event.target.parentElement.parentElement;
+    console.log(lic);
     const completadas=document.getElementById('completadas');
-    completadas.appendChild(li);
+    completadas.appendChild(lic);
 }
-function eliminar(event){
-    const li=event.target.parentElement.parentElement.parentElement;
+function eliminar(){
     li.remove();
 }

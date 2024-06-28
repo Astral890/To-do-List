@@ -16,6 +16,10 @@
 #listas{
     display: flex;
 }
+#divlis{
+    display: flex;
+    flex-wrap: warp;
+}
 button{
     margin: 10px;
 }

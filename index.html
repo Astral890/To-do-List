@@ -3,6 +3,7 @@
     <head>
         <title>To-do List</title>
         <link rel="stylesheet" href="main.css">
+        <script src="utils.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="box">
@@ -15,10 +16,6 @@
             <div id="tareas">
                 <h2>Tareas en marcha</h2>
                 <ul id="pendientes">
-                    <li id="listas">
-                        <p>Comprar algo</p>
-                        <button onclick="completar()">Completada</button>
-                    </li>
                 </ul>
             </div>
             <hr style="width: 600px;">
@@ -31,39 +28,6 @@
             <hr style="width: 580px;">
             <button id="eliminar">Eliminar Tarea</button>
         </div>
-        <script>
-        function incluirtarea(){
-            const toDo= document.getElementById('pendientes');
-            let text=document.getElementById('tana').value;
-            console.log(text);
-            if(text!=""){
-                // Tarea individual
-                const li=document.createElement('li');
-                li.id="listas";
-                // Creacion parrafo
-                const p=document.createElement('p');
-                p.innerHTML=text;
-                // Creacion boton
-                const check=document.createElement('button')
-                check.id='anadir';
-                check.innerHTML='Completada';
-                check.onclick=completar();
-                //Agrupamiento
-                p.appendChild(check);
-                li.appendChild(p);
-                toDo.appendChild(li);
-                }
-            }
-        function completar(){
-            const li=event.target.parentElement.parentElement.parentElement;
-            const completadas=document.getElementById('completadas');
-            completadas.appendChild(li);
-        }
-        function eliminar(){
-            const li=event.target.parentElement.parentElement.parentElement;
-            li.remove();
-        }
-        </script>
         <!-- <script src="utils.js"></script> -->
     </body>
 </html>

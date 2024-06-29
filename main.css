@@ -1,24 +1,36 @@
 #box{
     display: flex;
-    margin: 1% 20%;
     flex-direction: column;
     width: 600px;
     border: solid 4px black;
     border-radius: 100px;
     align-items: center;
+    justify-self: center;
+    margin-top: 15px;
+    padding: 15px;
+}
+.tana{
+    margin: 15px;
 }
 #header{
     font-family: 'Courier New', Courier, monospace;
 }
-#tareas{
-    flex-wrap: nowrap;
+.lista{
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: space-around;
+    width: 400px;
 }
-#listas{
-    display: flex;
+.input{
+    flex-wrap: warp;
+}
+.snapFont{
+    font-size:larger;
 }
 #divlis{
     display: flex;
     flex-wrap: warp;
+    justify-content: space-between;
 }
 button{
     margin: 10px;

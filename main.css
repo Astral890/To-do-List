@@ -8,12 +8,14 @@
     justify-self: center;
     margin-top: 15px;
     padding: 15px;
+    background-color: #f90c0c;
 }
 .tana{
     margin: 15px;
 }
 #header{
     font-family: 'Courier New', Courier, monospace;
+    color: yellow;
 }
 .lista{
     flex-direction: row;
@@ -22,14 +24,14 @@
     width: 400px;
 }
 .input{
-    flex-wrap: warp;
+    flex-wrap: wrap;
 }
 .snapFont{
     font-size:larger;
 }
 #divlis{
     display: flex;
-    flex-wrap: warp;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 button{
